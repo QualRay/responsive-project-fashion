@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -96,6 +97,53 @@ main .image-text .bottom .line {
   background-color: black;
   opacity: 0.2;
 }
+main .vertical-text {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+main .vertical-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .vertical-text .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .vertical-text .bottom {
+  display: flex;
+  gap: 3em;
+}
+main .vertical-text .bottom .vert {
+  writing-mode: vertical-rl;
+  font-size: 0.6em;
+  font-weight: 200;
+  opacity: 0.8;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  padding-top: 0.8em;
+}
+main .vertical-text .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .vertical-text .bottom .text h1 {
+  font-size: 3em;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .vertical-text .bottom .text p {
+  font-size: 1.3em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.6;
+}
 
 @media (min-width: 900px) {
   main {
@@ -105,6 +153,12 @@ main .image-text .bottom .line {
   main .image-text {
     flex-direction: row-reverse;
     gap: 4em;
+  }
+  main .image-text .top {
+    width: 55%;
+  }
+  main .image-text .bottom {
+    width: 45%;
   }
   main .image-text .bottom h1 {
     font-size: 4em;
@@ -117,5 +171,31 @@ main .image-text .bottom .line {
   main .image-text .bottom .services .service p {
     font-size: 2em;
     font-weight: 200;
+  }
+  main .vertical-text {
+    flex-direction: row;
+    gap: 4em;
+  }
+  main .vertical-text .top {
+    width: 25%;
+  }
+  main .vertical-text .bottom {
+    width: 75%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  main .vertical-text .bottom .text {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 75%;
+  }
+  main .vertical-text .bottom .text h1 {
+    font-size: 4em;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+  }
+  main .vertical-text .bottom .text p {
+    margin-top: auto;
   }
 }/*# sourceMappingURL=style.css.map */
