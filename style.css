@@ -144,6 +144,78 @@ main .vertical-text .bottom .text p {
   line-height: 1.5;
   opacity: 0.6;
 }
+main .services {
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .services h1 {
+  font-size: 4em;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .services .top {
+  width: 100%;
+  padding: 2em 0;
+}
+main .services .top .service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3em;
+  width: 100%;
+}
+main .services .top .service {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+main .services .top .service h2 {
+  font-size: 2.5em;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+main .services .top .service p {
+  font-size: 1.2em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.6;
+}
+main .services .top .service .about {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: auto;
+}
+main .services .top .service .about img {
+  width: 28px;
+  height: 28px;
+  border: 1px solid black;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  padding: 0.2em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+main .services .top .service .about h3 {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .services .bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 @media (min-width: 900px) {
   main {
